@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
+import Tasks from './Tasks'
 import './index.scss'
-
+import Organizations from './Organizations';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -11,7 +11,11 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Organizations />,
+  },
+  {
+    path: "/tasks",
+    element: <Tasks />,
   },
 ]);
 

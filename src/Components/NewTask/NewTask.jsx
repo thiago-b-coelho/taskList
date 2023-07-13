@@ -10,14 +10,12 @@ const NewTask = ({ addTask }) => {
         addTask(newTask, newTaskDescription);
         setNewTask("");
         setNewTaskDescription("");
-        document.getElementById("1").focus();
     }
     function enterPressed(e) {
         if (e.key === "Enter" && newTask !== "") {
             addTask(newTask, newTaskDescription);
             setNewTask("");
             setNewTaskDescription("");
-            document.getElementById("new-task").focus();
         }
     }
 

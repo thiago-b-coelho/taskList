@@ -3,7 +3,7 @@ import Header from "./Components/Header/Header";
 import TaskList from "./Components/TaskList/TaskList";
 
 /* Lista de tarefas default */
-const db = [
+const tdb = [
     {
         id: 1,
         title: "Exercicios",
@@ -76,7 +76,7 @@ const db = [
     },
 ];
 
-function App() {
+const Tasks = () => {
     /**
      * Para simplificação, o App.jsx conterá apenas a lista de tarefas que
      * inicializa o localStorage e os componentes de Header e TaskList que 
@@ -84,10 +84,10 @@ function App() {
      */
     return (
         <>
-            <Header />
-            <TaskList data={db} />
+            <Header focus="tasks"/>
+            <TaskList data={tdb} />
         </>
     );
 }
 
-export default App;
+export default Tasks;
