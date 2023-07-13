@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./Components/Header/Header";
-import TaskList from "./Components/TaskList/TaskList";
+import Header from "../Components/Header/Header";
+import TaskList from "../Components/TaskList/TaskList";
 import { useParams } from "react-router-dom";
 
 /* Lista de tarefas default */

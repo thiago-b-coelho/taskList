@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
-import Header from "./Components/Header/Header";
-import OrganizationList from "./Components/OrganizationList/OrganizationList";
+import Header from "../Components/Header/Header";
+import OrganizationList from "../Components/OrganizationList/OrganizationList";
 import { Outlet } from "react-router-dom";
 
 /* Lista de tarefas default */

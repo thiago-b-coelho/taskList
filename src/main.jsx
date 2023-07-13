@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Tasks from "./Tasks";
+import Tasks from "./Pages/Tasks";
 import "./index.scss";
-import Organizations from "./Organizations";
+import Organizations from "./Pages/Organizations";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 
