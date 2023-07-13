@@ -1,10 +1,10 @@
 # TaskList DNC challenges 3 and 4
 
-Project started on challenge 3 and improved for challenge 4.
-Improvements were made in order to get in touch with git versioning.
+Project started on challenge 3 and improved for challenge 4.  
+Improvements were made in order to get in touch with git versioning.  
 Naming conventions for branches and commits based on [Gitflow](https://www.atlassian.com/br/git/tutorials/comparing-workflows/gitflow-workflow).
 
-[Project Link](https://task-list-dnc.vercel.app/)
+[Project Link](https://task-list-dnc.vercel.app/)  
 [Project Link with added features](https://tasklist-dnc-production.netlify.app/)
 
 ## Features
@@ -33,6 +33,15 @@ Page responsible for creating and listing organizations to separate tasks.
 Page responsible for creating and listing tasks for each organization.
 
 
+## Usage
+
+It is pretty straightfoward, first add a group name for a group of tasks.  
+Then click on its name to be redirected to the page for adding new tasks.  
+After that you can add/edit/delete tasks and their descriptions.
+
+For now we use 'localstorage' to keep the data, so its not a permanent solution.  
+Databases would be the next step for this project to be complete.
+
 ## How to test project:
 
 ```bash
@@ -53,4 +62,4 @@ $ npm install
 $ npm run dev
 ```
 
-With the project running, go to [localhost](http://localhost:5173/).
+With the project running, go to [localhost](http://localhost:5173/) with port 5173 possibly.
