@@ -36,7 +36,8 @@ const OrganizationList = ({ data }) => {
         });
     }
 
-    function deleteOrganization(id) {
+    function deleteOrganization(id,title) {
+        localStorage.removeItem(title)
         setOrganizations((currentOrganizations) => {
             return currentOrganizations.filter(
                 (organizations) => organizations.id !== id

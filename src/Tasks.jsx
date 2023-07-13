@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Components/Header/Header";
 import TaskList from "./Components/TaskList/TaskList";
+import { useParams } from "react-router-dom";
 
 /* Lista de tarefas default */
 const tdb = [
@@ -76,7 +77,9 @@ const tdb = [
     },
 ];
 
-const Tasks = () => {
+const Tasks = ({}) => {
+
+    let {taskGroup} = useParams();
     /**
      * Para simplificação, o App.jsx conterá apenas a lista de tarefas que
      * inicializa o localStorage e os componentes de Header e TaskList que 
@@ -85,7 +88,7 @@ const Tasks = () => {
     return (
         <>
             <Header focus="tasks"/>
-            <TaskList data={tdb} />
+            <TaskList data={tdb} taskGroup={taskGroup}/>
         </>
     );
 }

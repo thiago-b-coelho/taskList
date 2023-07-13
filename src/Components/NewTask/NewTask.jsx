@@ -10,12 +10,14 @@ const NewTask = ({ addTask }) => {
         addTask(newTask, newTaskDescription);
         setNewTask("");
         setNewTaskDescription("");
+        document.getElementById("new-input").focus();
     }
     function enterPressed(e) {
         if (e.key === "Enter" && newTask !== "") {
             addTask(newTask, newTaskDescription);
             setNewTask("");
             setNewTaskDescription("");
+            document.getElementById("new-input").focus();
         }
     }
 
@@ -25,6 +27,7 @@ const NewTask = ({ addTask }) => {
                 <div className="input-task">
                     <input
                         type="text"
+                        id="new-input"
                         onChange={(e) => setNewTask(e.target.value)}
                         value={newTask}
                         placeholder="Nova tarefa..."
