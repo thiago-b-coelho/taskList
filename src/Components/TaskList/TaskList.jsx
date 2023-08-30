@@ -11,15 +11,19 @@ import ViewTasks from "../ViewTasks/ViewTasks";
  * botões de deletar, editar e 'concluir') e o NewTask (autoexplicativo).
  */
 
-const TaskList = ({ data }) => {
+const TaskList = ({ data, taskGroup }) => {
     /**
      * Aqui a lista de tarefas é inicializada no localStorage para que seja
      * usada de exemplo e não seja perdida caso a página seja atualizada.
      * A lista retornada pelo useState fica armazenada na variável tasks.
      */
     const [tasks, setTasks] = useState(() => {
-        const localValue = localStorage.getItem("ITEMS");
-        if (!localValue) localStorage.setItem("ITEMS", JSON.stringify(data));
+        const localValue = localStorage.getItem(taskGroup);
+        if (!localValue && taskGroup=="DNC"){ 
+            localStorage.setItem(taskGroup, JSON.stringify(data))
+        }else if(!localValue){
+            localStorage.setItem(taskGroup, JSON.stringify([]));
+        }
         return JSON.parse(localValue);
     }, []); // componentDidMount 1x
 
@@ -28,7 +32,7 @@ const TaskList = ({ data }) => {
      * tarefas no localStorage, seja ela menor ou maior que a anterior.
      */
     useEffect(() => {
-        localStorage.setItem("ITEMS", JSON.stringify(tasks));
+        localStorage.setItem(taskGroup, JSON.stringify(tasks));
     }, [tasks]); // componentDidUpdate toda vez que 'tasks' atualiza
 
     /**

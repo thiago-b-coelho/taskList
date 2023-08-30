@@ -42,7 +42,7 @@ const ViewTasks = ({ tasks, DeleteTask, toggleCompleted, EditTask }) => {
                     </>
                 ) : (
                     <tr key={task.id}>
-                        <td>{task.title}</td>
+                        <td className={task.completed?"task-completed":null}>{task.title}</td>
                         <td>
                             <img
                                 src={isDone}
