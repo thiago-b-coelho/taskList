@@ -1,7 +1,5 @@
-# TaskList DNC challenges 3 and 4
+# TaskList 
 
-Project started on challenge 3 and improved for challenge 4.  
-Improvements were made in order to get in touch with git versioning.  
 Naming conventions for branches and commits based on [Gitflow](https://www.atlassian.com/br/git/tutorials/comparing-workflows/gitflow-workflow).
 
 [Project Link](https://task-list-dnc.vercel.app/)  
@@ -62,4 +60,4 @@ $ npm install
 $ npm run dev
 ```
 
-With the project running, go to [localhost](http://localhost:5173/) with port 5173 possibly.
+With the project running, go to [localhost](http://localhost:5173/) with port 5173.
